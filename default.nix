@@ -14,5 +14,4 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  gowin-eda-edu-ide = pkgs.callPackage ./pkgs/gowin-eda-edu-ide { };
 } // (pkgs.callPackage ./pkgs/themes { })
