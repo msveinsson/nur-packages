@@ -15,6 +15,13 @@ stdenv.mkDerivation rec {
     hash = "sha256-dMXSXS3Scj1LZZqqnvvC37VWSyjSQZg9thvjcm2iNSM=";
   };
 
+  installPhase = ''
+    runHook preInstall
+    mkdir -p $out
+    cp -r * $out
+    runHook postInstall
+  '';
+
   meta = {
     description = "Soothing pastel theme for Yazi";
     homepage = "https://github.com/catppuccin/yazi";
