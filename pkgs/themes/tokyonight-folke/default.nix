@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
     hash = "sha256-vKXlFHzga9DihzDn+v+j3pMNDfvhYHcCT8GpPs0Uxgg=";
   };
 
-installPhase = ''
+  installPhase = ''
     runHook preInstall
     mkdir -p $out
     cp -r * $out
@@ -28,7 +28,7 @@ installPhase = ''
     changelog = "https://github.com/folke/tokyonight.nvim/blob/${src.rev}/CHANGELOG.md";
     license = lib.licenses.asl20;
     maintainers = with lib.maintainers; [ ];
-    mainProgram = "tokyonight-folke";
+    mainProgram = "tokyonight.nvim";
     platforms = lib.platforms.all;
   };
 }
